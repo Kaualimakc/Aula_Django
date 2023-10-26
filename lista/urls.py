@@ -3,5 +3,5 @@ from .views import lista
 
 
 urlpatterns = [
-    path('', lista)
+    path('', lista, name='lista')
 ]
