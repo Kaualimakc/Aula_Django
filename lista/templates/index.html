@@ -8,12 +8,17 @@
 </head>
 
 <body>
+
     <h1>Lista de nomes</h1>
     <hr>
+
+    <form action="add_item">
+        <input type="submit" value="add item">
+    </form>
     <ul>
-    {% for item in itens %}
-        <li>{{item.item}} | {{item.quantidade}}</li>
-    {% endfor %}    
+        {% for item in itens %}
+        <li>{{item.item}} --- {{item.quantidade}}</li>
+        {% endfor %}
     </ul>
 </body>
 
