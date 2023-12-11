@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: silver;
+      }
+      h1 {
+        width: auto;
+        color: aquamarine;
+        font-family: fantasy, sans-serif;
+        text-align: center;
+      }
+      ul {
+        width: 250px;
+        color: aquamarine;
+        font-size: x-large;
+      }
+      form{
+        text-align: center;
+      }
+    </style>
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1>Lista de nomes</h1>
-    <hr>
+    <hr />
 
     <form action="add_item">
-        <input type="submit" value="add item">
+      <input type="submit" value="add item" />
     </form>
     <ul>
-        {% for item in itens %}
-        <li>{{item.item}} --- {{item.quantidade}}</li>
-        {% endfor %}
+      {% for item in itens %}
+      <li>{{item.item}} --- {{item.quantidade}}--{{item.preco}}</li><hr>
+      {% endfor %}
     </ul>
-</body>
-
+  </body>
 </html>
